@@ -25,7 +25,8 @@ public class IngestionController {
         if (pipeline != null) {
             return "⚠️ Ingestion pipeline is already running!";
         }
-
+        MyStreamSource source = new MyStreamSource();
+        source.start();
         return "✅ Ingestion pipeline started successfully!";
     }
 }

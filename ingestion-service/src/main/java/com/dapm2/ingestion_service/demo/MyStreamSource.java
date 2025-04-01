@@ -53,6 +53,7 @@ public class MyStreamSource extends Source<Event> {
 
                 // Create and queue the Event
                 Event dapmEvent = new Event(caseId, activity, timestamp, eventAttributes);
+                System.out.println("Ingested Event: " + dapmEvent);
                 eventQueue.put(dapmEvent);
             }
         };
